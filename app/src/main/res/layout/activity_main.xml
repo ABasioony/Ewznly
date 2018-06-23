@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".Main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/Login"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:layout_marginBottom="10dp"
+            android:text="Login"
+            android:textColor="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/Try"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:text="Try"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

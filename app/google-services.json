@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "873512361195",
+    "firebase_url": "https://ewznly-931b4.firebaseio.com",
+    "project_id": "ewznly-931b4",
+    "storage_bucket": "ewznly-931b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:873512361195:android:5b4ddebac3c96ee9",
+        "android_client_info": {
+          "package_name": "domain.ewznly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "873512361195-sq37non7p3i7tu8fsqvquncp11u9es0u.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "873512361195-sq37non7p3i7tu8fsqvquncp11u9es0u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDurCnJNnzj0JaMlh7fCyKSciYYo-ytrl0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
