@@ -30,7 +30,7 @@ public class Home extends AppCompatActivity {
     private TextView textView;
     private Uri file;
     private static int RESULT_LOAD_IMAGE = 1;
-
+    static String name = "";
     private FirebaseAuth.AuthStateListener authListener;
     private FirebaseAuth auth;
     @Override
@@ -41,6 +41,7 @@ public class Home extends AppCompatActivity {
         //get firebase auth instance
         auth = FirebaseAuth.getInstance();
         TakePic = findViewById(R.id.TakeBTN);
+
         //get current user
         final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -113,7 +114,8 @@ public class Home extends AppCompatActivity {
                 String uri;
                 uri = file.toString();
                 Intent intent = new Intent(Home.this,PreviewActivity.class);
-                intent.putExtra("Image",uri);
+                intent.putExtra("ImageUri",uri);
+                intent.putExtra("name",name);
                 startActivity(intent);
             }
         } else if (requestCode == 200){
@@ -126,10 +128,15 @@ public class Home extends AppCompatActivity {
 
             int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
             String picturePath = cursor.getString(columnIndex);
+            name = picturePath;
             cursor.close();
 
             Intent intent = new Intent(Home.this,PreviewActivity.class);
             intent.putExtra("Image",picturePath);
+            String uri;
+            uri = selectedImage.toString();
+            intent.putExtra("ImageUri",uri);
+            intent.putExtra("name",name);
             startActivity(intent);
 
         }
@@ -145,7 +152,9 @@ public class Home extends AppCompatActivity {
             }
         }
 
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmm").format(new Date());
+        name = mediaStorageDir.getPath() + File.separator +
+                "IMG_"+ timeStamp + ".jpg";
         return new File(mediaStorageDir.getPath() + File.separator +
                 "IMG_"+ timeStamp + ".jpg");
 

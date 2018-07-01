@@ -32,4 +32,12 @@
         android:background="@drawable/rounded_button"
         android:textColor="@color/colorPrimary"
         android:layout_margin="5dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="url"
+        android:id="@+id/get_url"
+        android:textSize="18sp"
+        android:background="@drawable/rounded_button"
+        android:textColor="@color/colorPrimary"/>
 </LinearLayout>
